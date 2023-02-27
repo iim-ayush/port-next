@@ -3,5 +3,5 @@ import React from "react";
 type Props = {};
 
 export default function Contact({}: Props) {
-  return <div>Contact</div>;
+  return <section id="contact">Contact</section>;
 }

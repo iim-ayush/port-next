@@ -1,33 +1,134 @@
-.btn {
-  background: linear-gradient(
-    92.23deg,
-    #ff56f6 21.43%,
-    #b936ee 50.63%,
-    #3bace2 100%,
-    #406aff 117.04%
-  );
-  box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Julee&family=Mukta&display=swap");
+:root {
+  font-size: 62.5%;
 }
 
-.btn:hover {
-  background: linear-gradient(
-    92.23deg,
-    #406aff 21.43%,
-    #3bace2 50.63%,
-    #b936ee 100%,
-    #ff56f6 117.04%
-  );
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --font-primary: "Mukta", sans-serif;
+  --font-secondary: "Julee", cursive;
+  --font-fancy: "Caveat", cursive;
+
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  color: white;
+}
+
+section {
+  min-height: 100vh;
+}
+
+.h2 {
+  font-family: var(--font-secondary);
+  font-size: 3.2rem;
+  text-align: center;
+  margin: 2rem 0;
+  text-transform: uppercase;
+}
+
+.h3 {
+  font-family: var(--font-secondary);
+  font-size: 2.6rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 2rem 0;
+  text-transform: uppercase;
+}
+
+.btn-sm {
+  height: 4.8rem;
+  padding: 0rem 2.4rem;
+  font-size: 1.4rem;
+}
+
+.btn-sm {
+  height: 5.6rem;
+  padding: 0rem 4rem;
+  font-size: 1.6rem;
+}
+
+.text-gradient {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-family: var(--font-secondary);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.text-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(92.23deg, #42a6e3, #ff56f6, #42a6e3);
+  z-index: -1;
+  transition: all 0.4s ease;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient:hover::before {
+  left: -100%;
+}
+
+.section {
+  padding: 3.2rem 0;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 960px) {
+  .section {
+    height: 100vh;
+    padding: 9.6rem 0;
+  }
+}
+
+.btn {
+  box-shadow: 0px 4.42184px 107.23px rgba(255, 86, 246, 0.51);
+  border-radius: 100px;
+  border: none;
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  color: white;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(92.23deg, #42a6e3, #ff56f6, #42a6e3);
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+
+.btn:hover::before {
+  left: -100%;
 }
 
 .gradient,
 .active {
-  background: linear-gradient(
-    92.23deg,
-    #406aff 21.43%,
-    #3bace2 50.63%,
-    #b936ee 100%,
-    #ff56f6 117.04%
-  );
+  background: linear-gradient(92.23deg, #42a6e3, #ff56f6);
 }
 
 .active {
